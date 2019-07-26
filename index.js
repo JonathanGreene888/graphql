@@ -64,6 +64,6 @@ query posts {
 );
 
 // Start the server
-app.listen(3000, () => {
+app.listen({ port: process.env.PORT || 3000 }, () => {
     console.log('Go to http://localhost:3000/graphql to run queries!');
 });

@@ -13,10 +13,21 @@ const typeDefs = `
     author: Author
   }
 
+  type GetWeeksOfDemandDefaultMasterRule {
+    smooth: Int!
+    WeeksOfDemandFactors: [WeeksOfDemandFactor]
+  }
+
+  type WeeksOfDemandFactor {
+    factor: Int
+    threshold: Int
+  }
+
   # The schema allows the following query:
   type Query {
     author(id: Int!): Author
     posts: [Post]
+    getWeeksOfDemand: [GetWeeksOfDemandDefaultMasterRule]
   }
 `;
 

@@ -51,7 +51,7 @@ query getWeeksOfDemandDefaultMasterRule($name: String!) {
 }
 
 query GetCalculationRulesByMajorID(majorID: 1) {
-  getCalculationRulesByMajorID(majorID: Int!) {
+  getCalculationRulesByMajorID(majorID: 1) {
     ruleID
     description
     major {

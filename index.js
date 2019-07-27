@@ -64,6 +64,6 @@ query posts {
 );
 
 // Start the server
-app.listen({ port: process.env.PORT || 3000 }, () => {
+app.listen(process.env.PORT || 3000, () => {
     console.log(`Go to ${process.env.PORT || 3000} to run queries!`);
 });

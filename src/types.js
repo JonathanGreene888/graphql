@@ -13,6 +13,31 @@ const typeDefs = `
     author: Author
   }
 
+
+  type GetCalculationRulesByMajorID {
+      ruleID: ID
+      description: String
+      major: [Major]
+      minor: [Minor]
+      item: [Item]
+  }
+
+  type Major {
+    name: String!
+    id: Int!
+  }
+  type Minor {
+    majorID: Int!
+    minorID: Int!
+    name: String!
+    description: String!
+  }
+
+  type Item {
+    itemID: Int!
+  }
+
+
   type GetWeeksOfDemandDefaultMasterRule {
     smooth: Int!
     WeeksOfDemandFactors: [WeeksOfDemandFactor]
@@ -34,6 +59,7 @@ const typeDefs = `
     posts: [Post]
     getWeeksOfDemand: [GetWeeksOfDemandDefaultMasterRule]
     getMajors: [GetMajors]
+    getCalculationRulesByMajorID:[GetCalculationRulesByMajorID]
   }
 `;
 

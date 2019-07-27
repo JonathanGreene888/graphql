@@ -40,7 +40,7 @@ query author {
 }
 
 query getWeeksOfDemandDefaultMasterRule($name: String!) {
-  getWeeksOfDemand($name: String!) {
+  getWeeksOfDemand(name: $name) {
     name
     smooth
       WeeksOfDemandFactors {
@@ -48,6 +48,13 @@ query getWeeksOfDemandDefaultMasterRule($name: String!) {
         threshold
       }
     }
+}
+
+query GetMinorsByMajorID($majorID: Int!) {
+  getMinorsByMajorID(majorID: $majorID) {
+    minorID
+    name
+  }
 }
 
 query posts {

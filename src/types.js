@@ -13,7 +13,6 @@ const typeDefs = `
     author: Author
   }
 
-
   type GetCalculationRulesByMajorID {
       ruleID: ID
       description: String

@@ -23,11 +23,17 @@ const typeDefs = `
     threshold: Int
   }
 
+  type GetMajors {
+    ID: ID!
+    name: String!
+  }
+
   # The schema allows the following query:
   type Query {
     author(id: Int!): Author
     posts: [Post]
     getWeeksOfDemand: [GetWeeksOfDemandDefaultMasterRule]
+    getMajors: [GetMajors]
   }
 `;
 

@@ -50,8 +50,8 @@ query getWeeksOfDemandDefaultMasterRule($name: String!) {
     }
 }
 
-query GetMajors($id: ID!) {
-  getMajors($id: ID!) {
+query GetMajors($id: Int!) {
+  getMajors($id: Int!) {
     id
     name
     }

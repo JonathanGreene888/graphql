@@ -8,7 +8,7 @@ export default {
 
     // Use functions to specific default values per type in the schema, for example
     Int: () => 7,
-    String: () => 'Default Message',
+    String: () => casual.state,
 
     // Also customize your types and their fields too!
     Post: () => ({

@@ -24,7 +24,7 @@ const typeDefs = `
   }
 
   type GetMajors {
-    ID: ID!
+    id: ID!
     name: String!
   }
 

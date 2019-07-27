@@ -7,7 +7,7 @@ export default {
     // You can read more about mocking here: http://bit.ly/2pOYqXF
 
     // Use functions to specific default values per type in the schema, for example
-    Int: () => casual.integer(0, 1),
+    Int: () => casual.integer(1, 2),
     String: () => casual.state,
 
     // Also customize your types and their fields too!

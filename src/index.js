@@ -48,27 +48,6 @@ query author {
 //     }
 // }
 
-<<<<<<< HEAD
-// query GetCalculationRulesByMajorID({$majorID: Int!) {
-//   getCalculationRulesByMajorID($majorID: Int!) {
-//     ruleID
-//     description
-//     major {
-//       name
-//       id
-//     }
-//     minor {
-//       majorID
-//       minorID
-//       name
-//       description
-//     }
-//     item {
-//       itemID
-//     }
-//   }
-// }
-=======
 query GetCalculationRulesByMajorID({$majorID: Int) {
   getCalculationRulesByMajorID(majorID: $majorID) {
     ruleID
@@ -88,7 +67,6 @@ query GetCalculationRulesByMajorID({$majorID: Int) {
     }
   }
 }
->>>>>>> 3f0d4ff6a848b6fae33426a7c4245c968ff62e07
 
 
 // query GetMajors($id: Int!) {

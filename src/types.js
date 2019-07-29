@@ -13,29 +13,6 @@
 //     votes: Int
 //   }
 
-//   type GetCalculationRulesByMajorID {
-//       ruleID: ID
-//       description: String
-//       major: [Major]
-//       minor: [Minor]
-//       item: [Item]
-//   }
-
-// type Major {
-//   name: String!
-//   id: Int!
-// }
-//   type Minor {
-//     majorID: Int!
-//     minorID: Int!
-//     name: String!
-//     description: String!
-//   }
-
-//   type Item {
-//     itemID: Int!
-//   }
-
 //   type GetWeeksOfDemandDefaultMasterRule {
 //     smooth: Int!
 //     WeeksOfDemandFactors: [WeeksOfDemandFactor]
@@ -84,11 +61,32 @@ const typeDefs = `
     id: Int!
   }
 
+    type GetCalculationRulesByMajorID {
+      ruleID: ID
+      description: String
+      major: [Major]
+      minor: [Minor]
+      item: [Item]
+  }
+
+  type Minor {
+    majorID: Int!
+    minorID: Int!
+    name: String!
+    description: String!
+  }
+
+  type Item {
+    itemID: Int!
+  }
+
+
   # the schema allows the following query:
   type Query {
     posts: [Post]
     author(id: Int!): Author
     getMajors : [Major]
+    getCalculationRulesByMajorID: [GetCalculationRulesByMajorID]
   }
 
   # this schema allows the following mutation:

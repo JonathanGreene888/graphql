@@ -24,11 +24,32 @@ const majors = [
     { name: 'cheetos taco belgrande', id: 7 },
 ];
 
+const rules = [
+    {
+        ruleID: 1,
+        description: 'tacos are great',
+        major: {
+            name: 'Rainbow Taco',
+            id: 5,
+        },
+        minor: {
+            majorID: 1,
+            minorID: 1,
+            name: 'one',
+            description: 'one',
+        },
+        item: {
+            itemID: 1,
+        },
+    },
+];
+
 const resolvers = {
     Query: {
         posts: () => posts,
         author: (_, { id }) => find(authors, { id }),
         getMajors: () => majors,
+        getCalculationRulesByMajorID: () => rules,
     },
 
     Mutation: {

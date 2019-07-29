@@ -21,10 +21,10 @@
 //       item: [Item]
 //   }
 
-//   type Major {
-//     name: String!
-//     id: Int!
-//   }
+// type Major {
+//   name: String!
+//   id: Int!
+// }
 //   type Minor {
 //     majorID: Int!
 //     minorID: Int!
@@ -79,10 +79,16 @@ const typeDefs = `
     votes: Int
   }
 
+  type Major {
+    name: String!
+    value: Int!
+  }
+
   # the schema allows the following query:
   type Query {
     posts: [Post]
     author(id: Int!): Author
+    majors: [Major]
   }
 
   # this schema allows the following mutation:

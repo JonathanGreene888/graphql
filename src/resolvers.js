@@ -34,7 +34,7 @@ const rules = [
         },
 
         minor: {
-            majorID: 1,
+            majorID: 5,
             minorID: 1,
             name: 'one',
             description: 'one',
@@ -42,6 +42,25 @@ const rules = [
 
         item: {
             itemID: 1,
+        },
+    },
+    {
+        ruleID: 2,
+        description: 'tacos are bad',
+        major: {
+            name: 'Bad Taco',
+            id: 6,
+        },
+
+        minor: {
+            majorID: 6,
+            minorID: 2,
+            name: 'two',
+            description: 'two',
+        },
+
+        item: {
+            itemID: 2,
         },
     },
 ];

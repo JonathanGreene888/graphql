@@ -14,6 +14,7 @@ const typeDefs = `
   }
 
   type GetCalculationRulesByMajorID {
+      majorID: Int!
       ruleID: ID
       description: String
       major: [Major]

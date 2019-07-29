@@ -15,20 +15,20 @@ const posts = [
 ];
 
 const majors = [
-    { name: 'Taco', value: 1 },
-    { name: 'cheeseburger', value: 2 },
-    { name: 'doublecheeseburger', value: 3 },
-    { name: 'red', value: 4 },
-    { name: 'white', value: 5 },
-    { name: 'cheese taco', value: 6 },
-    { name: 'cheetos taco belgrande', value: 7 },
+    { name: 'Taco', id: 1 },
+    { name: 'cheeseburger', id: 2 },
+    { name: 'doublecheeseburger', id: 3 },
+    { name: 'red', id: 4 },
+    { name: 'white', id: 5 },
+    { name: 'cheese taco', id: 6 },
+    { name: 'cheetos taco belgrande', id: 7 },
 ];
 
 const resolvers = {
     Query: {
         posts: () => posts,
         author: (_, { id }) => find(authors, { id }),
-        majors: () => majors,
+        getMajors: () => majors,
     },
 
     Mutation: {

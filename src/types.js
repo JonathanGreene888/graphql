@@ -81,14 +81,14 @@ const typeDefs = `
 
   type Major {
     name: String!
-    value: Int!
+    id: Int!
   }
 
   # the schema allows the following query:
   type Query {
     posts: [Post]
     author(id: Int!): Author
-    majors: [Major]
+    getMajors : [Major]
   }
 
   # this schema allows the following mutation:

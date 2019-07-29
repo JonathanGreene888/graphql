@@ -86,7 +86,7 @@ const typeDefs = `
     posts: [Post]
     author(id: Int!): Author
     getMajors : [Major]
-    getCalculationRulesByMajorID(id: Int!): [GetCalculationRulesByMajorID]
+    getCalculationRulesByMajorID(majorID: Int!): [GetCalculationRulesByMajorID]
   }
 
   # this schema allows the following mutation:

@@ -1,64 +1,95 @@
+// const typeDefs = `
+//   type Author{
+//     id: Int!
+//     firstName: String
+//     lastName: String
+//     posts: [Post]
+//   }
+
+//   type Post {
+//     id: Int!
+//     authorId: Int
+//     title: String
+//     votes: Int
+//   }
+
+//   type GetCalculationRulesByMajorID {
+//       ruleID: ID
+//       description: String
+//       major: [Major]
+//       minor: [Minor]
+//       item: [Item]
+//   }
+
+//   type Major {
+//     name: String!
+//     id: Int!
+//   }
+//   type Minor {
+//     majorID: Int!
+//     minorID: Int!
+//     name: String!
+//     description: String!
+//   }
+
+//   type Item {
+//     itemID: Int!
+//   }
+
+//   type GetWeeksOfDemandDefaultMasterRule {
+//     smooth: Int!
+//     WeeksOfDemandFactors: [WeeksOfDemandFactor]
+//   }
+
+//   type WeeksOfDemandFactor {
+//     factor: Int
+//     threshold: Int
+//   }
+
+//   type GetMajors {
+//     id: Int!
+//     name: String!
+//   }
+
+//   # The schema allows the following query:
+//   type Query {
+//     author(id: Int!): Author
+//     posts: [Post]
+//     getWeeksOfDemand: [GetWeeksOfDemandDefaultMasterRule]
+//     getMajors: [GetMajors]
+//     getCalculationRulesByMajorID:[GetCalculationRulesByMajorID]
+//   }
+// `;
+
 const typeDefs = `
   type Author {
-    id: ID!
-    name: String
+    id: Int!
+    firstName: String
+    lastName: String
+    """
+    the list of Posts by this author
+    """
     posts: [Post]
   }
 
   type Post {
-    id: ID!
+    id: Int!
     title: String
-    content: String
-    views: Int
     author: Author
+    votes: Int
   }
 
-  type GetCalculationRulesByMajorID {
-      ruleID: ID
-      description: String
-      major: [Major]
-      minor: [Minor]
-      item: [Item]
-  }
-
-  type Major {
-    name: String!
-    id: Int!
-  }
-  type Minor {
-    majorID: Int!
-    minorID: Int!
-    name: String!
-    description: String!
-  }
-
-  type Item {
-    itemID: Int!
-  }
-
-
-  type GetWeeksOfDemandDefaultMasterRule {
-    smooth: Int!
-    WeeksOfDemandFactors: [WeeksOfDemandFactor]
-  }
-
-  type WeeksOfDemandFactor {
-    factor: Int
-    threshold: Int
-  }
-
-  type GetMajors {
-    id: Int!
-    name: String!
-  }
-
-  # The schema allows the following query:
+  # the schema allows the following query:
   type Query {
-    author(id: Int!): Author
     posts: [Post]
-    getWeeksOfDemand: [GetWeeksOfDemandDefaultMasterRule]
-    getMajors: [GetMajors]
-    getCalculationRulesByMajorID:[GetCalculationRulesByMajorID]
+    author(id: Int!): Author
+  }
+
+  # this schema allows the following mutation:
+  type Mutation {
+    upvotePost (
+      postId: Int!
+    ): Post
   }
 `;
 

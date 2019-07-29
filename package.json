@@ -19,7 +19,8 @@
         "casual": "^1.5.19",
         "express": "^4.16.2",
         "graphql": "^0.13.1",
-        "graphql-tools": "^2.21.0"
+        "graphql-tools": "^2.21.0",
+        "lodash": "^4.17.15"
     },
     "devDependencies": {
         "babel-preset-env": "^1.6.1",

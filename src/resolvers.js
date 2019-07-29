@@ -49,7 +49,7 @@ const resolvers = {
         posts: () => posts,
         author: (_, { id }) => find(authors, { id }),
         getMajors: () => majors,
-        getCalculationRulesByMajorID: () => rules,
+        getCalculationRulesByMajorID: (_, { id }) => rules,
     },
 
     Mutation: {

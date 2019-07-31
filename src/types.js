@@ -27,8 +27,8 @@ const typeDefs = `
   }
 
   type RuleContent {
-    items: [Int!]
-    stores: [Int!]
+    ruleItems: [Int!]
+    ruleStores: [Int!]
     ruleDetail: RuleDetail
   }
 

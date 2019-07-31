@@ -13,10 +13,8 @@ export const posts = [
 
 export const masterRuleContent = {
     smooth: 1,
-    weeksOfDemandRuleDetail: {
-        weeklyDemandFactors: [52, 13, 6],
-        thresholds: [1, 2, 3],
-    },
+    weeklyDemandFactors: [52, 13, 6],
+    thresholds: [1, 2, 3],
 };
 
 export const ruleContent = {

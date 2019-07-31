@@ -79,8 +79,19 @@ const typeDefs = `
     votes: Int
   }
 
+  type WeeksOfDemandRuleDetail {
+    weeksOfDemandFators: [Int!]
+    thresholds: [Int!]
+  }
+
+  type MasterRuleContent {
+    smooth: Int!
+    weeksOfDemandRuleDetail: WeeksOfDemandRuleDetail
+  }
+
   # the schema allows the following query:
   type Query {
+    getMasterRuleContent: MasterRuleContent
     posts: [Post]
     author(id: Int!): Author
   }

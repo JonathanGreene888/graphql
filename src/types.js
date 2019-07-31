@@ -1,20 +1,4 @@
 const typeDefs = `
-  type Author {
-    id: Int!
-    firstName: String
-    lastName: String
-    """
-    the list of Posts by this author
-    """
-    posts: [Post]
-  }
-
-  type Post {
-    id: Int!
-    title: String
-    author: Author
-    votes: Int
-  }
 
   type WeeksOfDemandRuleDetail {
     weeksOfDemandFators: [Int!]
@@ -23,7 +7,8 @@ const typeDefs = `
 
   type RuleDetail {
     smooth: Int!
-    weeksOfDemandRuleDetail: WeeksOfDemandRuleDetail
+    weeksOfDemandFators: [Int!]
+    thresholds: [Int!]
   }
 
   type RuleContent {
@@ -58,18 +43,18 @@ const typeDefs = `
 
   # the schema allows the following query:
   type Query {
-    getMasterRuleContent: RuleDetail
-    getWeeksOfDemandRuleContentByID(ruleID: Int!): RuleContent
+    getMasterRuleContent: WeeksOfDemandRuleDetail
+    getWeeksOfDemandRuleContentByID(ruleID: String!): RuleContent
     getMajors : [Major]
     getCalculationRulesByMajorID(majorID: Int!): [GetCalculationRulesByMajorID]
   }
 
   # this schema allows the following mutation:
-  type Mutation {
-    upvotePost (
-      postId: Int!
-    ): Post
-  }
+  # type Mutation {
+  #   upvotePost (
+  #     postId: Int!
+  #   ): Post
+  # }
 `;
 
 export default typeDefs;

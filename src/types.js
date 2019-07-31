@@ -21,9 +21,15 @@ const typeDefs = `
     thresholds: [Int!]
   }
 
-  type MasterRuleContent {
+  type RuleDetail {
     smooth: Int!
     weeksOfDemandRuleDetail: WeeksOfDemandRuleDetail
+  }
+
+  type RuleContent {
+    items: [Int!]
+    stores: [Int!]
+    ruleDetail: RuleDetail
   }
 
   type Major {
@@ -52,9 +58,8 @@ const typeDefs = `
 
   # the schema allows the following query:
   type Query {
-    getMasterRuleContent: MasterRuleContent
-    posts: [Post]
-    author(id: Int!): Author
+    getMasterRuleContent: RuleDetail
+    getWeeksOfDemandRuleContent: RuleContent
     getMajors : [Major]
     getCalculationRulesByMajorID(majorID: Int!): [GetCalculationRulesByMajorID]
   }

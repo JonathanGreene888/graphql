@@ -14,14 +14,14 @@ export const posts = [
 export const masterRuleContent = {
     smooth: 1,
     weeksOfDemandRuleDetail: {
-        weeksOfDemandFators: [52, 13, 6],
+        weeklyDemandFactors: [52, 13, 6],
         thresholds: [1, 2, 3],
     },
 };
 
 export const ruleContent = {
-    items: [1, 2, 3, 4, 5],
-    stores: [7, 8, 9, 18, 19],
+    ruleItems: [1, 2, 3, 4, 5],
+    ruleStores: [7, 8, 9, 18, 19],
     ruleDetail: masterRuleContent,
 };
 

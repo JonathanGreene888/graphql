@@ -18,3 +18,54 @@ export const masterRuleContent = {
     thresholds: [1, 2, 3]
   }
 };
+
+export const majors = [
+  { name: "Taco", id: 1 },
+  { name: "cheeseburger", id: 2 },
+  { name: "doublecheeseburger", id: 3 },
+  { name: "red", id: 4 },
+  { name: "white", id: 5 },
+  { name: "cheese taco", id: 6 },
+  { name: "cheetos taco belgrande", id: 7 }
+];
+
+export const rules = [
+  {
+    ruleID: 1,
+    description: "tacos are great",
+    major: {
+      name: "Rainbow Taco",
+      id: 5
+    },
+
+    minor: {
+      majorID: 5,
+      minorID: 1,
+      name: "one",
+      description: "one"
+    },
+
+    item: {
+      itemID: 1
+    }
+  },
+  {
+    ruleID: 2,
+    description: "tacos are bad",
+    major: {
+      name: "Bad Taco",
+      id: 6
+    },
+
+    minor: {
+      majorID: 6,
+      minorID: 2,
+      name: "two",
+      description: "two"
+    },
+
+    item: {
+      itemID: 2
+    }
+  }
+];

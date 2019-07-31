@@ -13,29 +13,6 @@
 //     votes: Int
 //   }
 
-//   type GetCalculationRulesByMajorID {
-//       ruleID: ID
-//       description: String
-//       major: [Major]
-//       minor: [Minor]
-//       item: [Item]
-//   }
-
-//   type Major {
-//     name: String!
-//     id: Int!
-//   }
-//   type Minor {
-//     majorID: Int!
-//     minorID: Int!
-//     name: String!
-//     description: String!
-//   }
-
-//   type Item {
-//     itemID: Int!
-//   }
-
 //   type GetWeeksOfDemandDefaultMasterRule {
 //     smooth: Int!
 //     WeeksOfDemandFactors: [WeeksOfDemandFactor]
@@ -79,6 +56,7 @@ const typeDefs = `
     votes: Int
   }
 
+<<<<<<< HEAD
   type WeeksOfDemandRuleDetail {
     weeksOfDemandFators: [Int!]
     thresholds: [Int!]
@@ -89,11 +67,40 @@ const typeDefs = `
     weeksOfDemandRuleDetail: WeeksOfDemandRuleDetail
   }
 
+=======
+  type Major {
+    name: String!
+    id: Int!
+  }
+
+    type GetCalculationRulesByMajorID {
+      ruleID: ID
+      description: String
+      major: Major
+      minor: Minor
+      item: Item
+  }
+
+  type Minor {
+    majorID: Int!
+    minorID: Int!
+    name: String!
+    description: String!
+  }
+
+  type Item {
+    itemID: Int!
+  }
+
+
+>>>>>>> 61724bdde6cb0f0e43c2f5d7ca650c07a1dfb030
   # the schema allows the following query:
   type Query {
     getMasterRuleContent: MasterRuleContent
     posts: [Post]
     author(id: Int!): Author
+    getMajors : [Major]
+    getCalculationRulesByMajorID(majorID: Int!): [GetCalculationRulesByMajorID]
   }
 
   # this schema allows the following mutation:

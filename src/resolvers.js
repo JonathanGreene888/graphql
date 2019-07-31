@@ -1,12 +1,13 @@
 import { find, filter } from "lodash";
-
-import { authors, masterRuleContent, posts } from "./data";
+import { authors, masterRuleContent, posts, majors, rules } from "./data";
 
 const resolvers = {
   Query: {
+    posts: () => posts,
     author: (_, { id }) => find(authors, { id }),
+    getMajors: () => majors,
     getMasterRuleContent: () => masterRuleContent,
-    posts: () => posts
+    getCalculationRulesByMajorID: (_, { majorID }) => rules
   },
 
   Mutation: {

@@ -56,7 +56,6 @@ const typeDefs = `
     votes: Int
   }
 
-<<<<<<< HEAD
   type WeeksOfDemandRuleDetail {
     weeksOfDemandFators: [Int!]
     thresholds: [Int!]
@@ -67,18 +66,17 @@ const typeDefs = `
     weeksOfDemandRuleDetail: WeeksOfDemandRuleDetail
   }
 
-=======
   type Major {
     name: String!
     id: Int!
   }
 
-    type GetCalculationRulesByMajorID {
-      ruleID: ID
-      description: String
-      major: Major
-      minor: Minor
-      item: Item
+  type GetCalculationRulesByMajorID {
+    ruleID: ID
+    description: String
+    major: Major
+    minor: Minor
+    item: Item
   }
 
   type Minor {
@@ -92,8 +90,6 @@ const typeDefs = `
     itemID: Int!
   }
 
-
->>>>>>> 61724bdde6cb0f0e43c2f5d7ca650c07a1dfb030
   # the schema allows the following query:
   type Query {
     getMasterRuleContent: MasterRuleContent

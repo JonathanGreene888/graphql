@@ -59,7 +59,7 @@ const typeDefs = `
   # the schema allows the following query:
   type Query {
     getMasterRuleContent: RuleDetail
-    getWeeksOfDemandRuleContent: RuleContent
+    getWeeksOfDemandRuleContentByID(ruleID: Int!): RuleContent
     getMajors : [Major]
     getCalculationRulesByMajorID(majorID: Int!): [GetCalculationRulesByMajorID]
   }

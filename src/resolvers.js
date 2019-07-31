@@ -1,11 +1,12 @@
 import { find } from 'lodash';
-import { masterRuleContent, posts, majors, rules } from './data';
+import { masterRuleContent, posts, majors, rules, ruleContent } from './data';
 
 const resolvers = {
     Query: {
         getMajors: () => majors,
         getMasterRuleContent: () => masterRuleContent,
         getCalculationRulesByMajorID: (_, { majorID }) => rules,
+        getWeeksOfDemandRuleContentByID: (_, { ruleID }) => ruleContent,
     },
 
     Mutation: {

@@ -50,11 +50,11 @@ const typeDefs = `
   }
 
   # this schema allows the following mutation:
-  # type Mutation {
-  #   upvotePost (
-  #     postId: Int!
-  #   ): Post
-  # }
+   type Mutation {
+    updateWeeksOfDemandRule (
+       ruleId: Int!
+     ): RuleContent
+   }
 `;
 
 export default typeDefs;

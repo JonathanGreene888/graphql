@@ -1,6 +1,8 @@
 const typeDefs = `
 
   input WeeksOfDemandInput {
+    ruleItems: [Int!]
+    ruleStores: [Int!]
     smooth: Int
     weeklyDemandFactors: [Int]
     thresholds: [Int]

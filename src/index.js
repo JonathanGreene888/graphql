@@ -27,34 +27,6 @@ app.use(
         endpointURL: '/graphql',
         query: `# Welcome to GraphiQL
 
-query GetCalculationRulesByMajorID({$majorID: Int) {
-  getCalculationRulesByMajorID(majorID: $majorID) {
-    ruleID
-    description
-    major {
-      name
-      id
-    }
-    minor {
-      majorID
-      minorID
-      name
-      description
-    }
-    item {
-      itemID
-    }
-  }
-}
-
-
-query GetMajors($id: Int!) {
-  getMajors($id: Int!) {
-    id
-    name
-    }
-}
-
 }`,
     })
 );

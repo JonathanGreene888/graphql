@@ -1,16 +1,16 @@
 const typeDefs = `
 
   input WeeksOfDemandInput {
-    smooth: String
-    weeklyDemandFactors: [String]
-    thresholds: [String]
+    smooth: Int
+    weeklyDemandFactors: [Int]
+    thresholds: [Int]
   }
 
   type WeeksOfDemandContent {
     ruleID: String
-    smooth: String
-    weeklyDemandFactors: [String]
-    thresholds: [String]
+    smooth: Int
+    weeklyDemandFactors: [Int]
+    thresholds: [Int]
   }
 
   type WeeksOfDemandRuleDetail {

@@ -26,8 +26,10 @@ app.use(
     graphiqlExpress({
         endpointURL: '/graphql',
         query: `# Welcome to GraphiQL
-
-}`,
+        mutation updateWeeksOfDemandRule($input: WeeksOfDemandInput) {
+          updateWeeksOfDemandRule(input: $input) {
+          }
+        }`,
     })
 );
 

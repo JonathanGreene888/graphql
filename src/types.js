@@ -8,9 +8,11 @@ const typeDefs = `
 
   type WeeksOfDemandContent {
     ruleID: String
+    ruleItems: [Int!]
+    ruleStores: [Int!]
     smooth: Int
-    weeklyDemandFactors: [Int]
     thresholds: [Int]
+    weeklyDemandFactors: [Int]
   }
 
   type WeeksOfDemandRuleDetail {

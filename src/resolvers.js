@@ -10,7 +10,7 @@ const resolvers = {
     },
 
     Mutation: {
-        updateWeeksOfDemandRule: (_, { ruleID, input }) => {
+        updateWeeksOfDemandRule: (_, { input }) => {
             const rule = find(rules, { id: input });
             if (rule) {
                 throw new Error(`Couldn't find rule with id ${input}`);

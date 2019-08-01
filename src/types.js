@@ -12,6 +12,7 @@ const typeDefs = `
   }
 
   type RuleContent {
+    ruleID: String
     ruleItems: [Int!]
     ruleStores: [Int!]
     ruleDetail: RuleDetail
@@ -23,7 +24,7 @@ const typeDefs = `
   }
 
   type GetCalculationRulesByMajorID {
-    ruleID: ID
+    ruleID: String
     description: String
     major: Major
     minor: Minor
@@ -51,9 +52,7 @@ const typeDefs = `
 
   # this schema allows the following mutation:
    type Mutation {
-    updateWeeksOfDemandRule (
-       ruleId: Int!
-     ): RuleContent
+    updateWeeksOfDemandRule (ruleId: String!): RuleContent
    }
 `;
 

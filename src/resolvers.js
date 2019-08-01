@@ -13,9 +13,9 @@ const resolvers = {
         updateWeeksOfDemandRule: (_, { ruleID }) => {
             const rule = find(rules, { id: ruleID });
             if (!rule) {
-                throw new Error(`Couldn't find post with id ${ruleID}`);
+                throw new Error(`Couldn't find rule with id ${ruleID}`);
             }
-            return post;
+            return rule;
         },
     },
 };

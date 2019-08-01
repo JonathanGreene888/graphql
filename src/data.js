@@ -35,7 +35,7 @@ export const majors = [
 
 export const rules = [
     {
-        ruleID: 1,
+        ruleID: '1',
         description: 'tacos are great',
         major: {
             name: 'Rainbow Taco',
@@ -54,7 +54,7 @@ export const rules = [
         },
     },
     {
-        ruleID: 2,
+        ruleID: '2',
         description: 'tacos are bad',
         major: {
             name: 'Bad Taco',

@@ -17,6 +17,13 @@ export const masterRuleContent = {
     thresholds: [1, 2, 3],
 };
 
+export const ruleDetailContent = {
+    ruleID: '1',
+    smooth: 1,
+    weeklyDemandFactors: [52, 13, 6],
+    thresholds: [1, 2, 3],
+};
+
 export const ruleContent = {
     ruleItems: [1, 2, 3, 4, 5],
     ruleStores: [7, 8, 9, 18, 19],

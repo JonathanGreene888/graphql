@@ -1,5 +1,5 @@
 import { find } from 'lodash';
-import { masterRuleContent, posts, majors, rules, ruleContent } from './data';
+import { masterRuleContent, majors, rules, ruleContent, ruleDetailContent } from './data';
 
 const resolvers = {
     Query: {
@@ -10,12 +10,12 @@ const resolvers = {
     },
 
     Mutation: {
-        updateWeeksOfDemandRule: (_, { ruleID }) => {
-            const rule = find(rules, { id: ruleID });
-            if (!rule) {
-                throw new Error(`Couldn't find rule with id ${ruleID}`);
+        updateWeeksOfDemandRule: (_, { ruleID, input }) => {
+            const rule = find(rules, { id: input });
+            if (rule) {
+                throw new Error(`Couldn't find rule with id ${input}`);
             }
-            return rule;
+            return ruleID, input;
         },
     },
 };

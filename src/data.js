@@ -18,6 +18,8 @@ export const masterRuleContent = {
 };
 
 export const ruleDetailContent = {
+    ruleItems: [1, 2, 3, 4, 5],
+    ruleStores: [7, 8, 9, 18, 19],
     ruleID: '1',
     smooth: 1,
     weeklyDemandFactors: [52, 13, 6],

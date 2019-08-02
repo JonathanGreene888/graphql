@@ -70,7 +70,7 @@ const typeDefs = `
 
   # this schema allows the following mutation:
    type Mutation {
-    updateWeeksOfDemandRule (input: WeeksOfDemandInput): WeeksOfDemandContent
+    updateWeeksOfDemandRule (input: WeeksOfDemandInput): String!
    }
 `;
 

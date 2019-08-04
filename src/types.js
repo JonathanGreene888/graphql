@@ -19,6 +19,7 @@ const typeDefs = `
   }
 
   type WeeksOfDemandRuleDetail {
+    smooth: Int
     weeklyDemandFactors: [Int!]
     thresholds: [Int!]
   }

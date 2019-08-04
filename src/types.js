@@ -18,7 +18,7 @@ const typeDefs = `
     weeklyDemandFactors: [Int]
   }
 
-  type WeeksOfDemandMasterRuleDetail {
+  type RuleDetail {
     smooth: Int
     weeklyDemandFactors: [Int!]
     thresholds: [Int!]
@@ -57,7 +57,7 @@ const typeDefs = `
 
   # the schema allows the following query:
   type Query {
-    getMasterRuleContent: WeeksOfDemandMasterRuleDetail
+    getMasterRuleContent: RuleDetail
     getWeeksOfDemandRuleContentByID(ruleID: String!): RuleContent
     getMajors : [Major]
     getCalculationRulesByMajorID(majorID: Int!): [GetCalculationRulesByMajorID]
@@ -65,8 +65,8 @@ const typeDefs = `
 
   # this schema allows the following mutation:
    type Mutation {
-    updateWeeksOfDemandRule(input: WeeksOfDemandInput): String!
-    updateWeeksofDemandMasterRule(input: WeeksOfDemandMasterRuleDetail): String!
+    updateWeeksOfDemandRule(input: WeeksOfDemandInput!): String!
+    updateWeeksOfDemandMasterRule(input: RuleDetail!): String!
    }
 `;
 

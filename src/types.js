@@ -8,8 +8,8 @@ const typeDefs = `
 
   input WeeksOfDemandInput {
     ruleID: String
-    ruleItems: [ID!]
-    ruleStores: [ID!]
+    ruleItems: [Int!]
+    ruleStores: [Int!]
     smooth: Int
     thresholds: [Int]
     weeklyDemandFactors: [Int]
@@ -17,8 +17,8 @@ const typeDefs = `
 
   type WeeksOfDemandContent {
     ruleID: String
-    ruleItems: [ID!]
-    ruleStores: [ID!]
+    ruleItems: [Int!]
+    ruleStores: [Int!]
     smooth: Int
     thresholds: [Int]
     weeklyDemandFactors: [Int]
@@ -32,8 +32,8 @@ const typeDefs = `
 
   type RuleContent {
     ruleID: String
-    ruleItems: [ID!]
-    ruleStores: [ID!]
+    ruleItems: [Int!]
+    ruleStores: [Int!]
     ruleDetail: RuleDetail
   }
 
@@ -73,7 +73,6 @@ const typeDefs = `
    type Mutation {
     updateWeeksOfDemandRule(input: WeeksOfDemandInput!): String!
     updateWeeksOfDemandMasterRule(input: WeeksOfDemandMasterInput!): String!
-    aSDFAS
    }
 `;
 

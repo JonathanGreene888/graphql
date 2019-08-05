@@ -33,7 +33,12 @@ export const ruleContent = {
     45454,
     56565,
     676766,
-    78787
+    78787,
+    123,
+    1234,
+    12356,
+    124347657,
+    5656734523423456567567
   ],
   ruleStores: [7, 8, 9, 18, 19],
   ruleDetail: masterRuleContent

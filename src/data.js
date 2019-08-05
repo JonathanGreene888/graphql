@@ -19,7 +19,7 @@ export const masterRuleContent = {
 
 export const ruleDetailContent = {
     ruleItems: [1, 2, 3, 4, 5],
-    ruleStores: [7, 8, 9, 18, 19, 3e54645, dfgdfg, ftghfghfg, fghfgh, fghfgg],
+    ruleStores: [7, 8, 9, 18, 19],
     ruleID: '1',
     smooth: 1,
     weeklyDemandFactors: [52, 13, 6],
@@ -27,7 +27,29 @@ export const ruleDetailContent = {
 };
 
 export const ruleContent = {
-    ruleItems: [1, 2, 3, 4, 5, 67, 78, 89, 23, 32, 56, 45454, 56565, 676766, 78787],
+    ruleItems: [
+        1,
+        2,
+        3,
+        4,
+        5,
+        67,
+        78,
+        89,
+        23,
+        32,
+        56,
+        45454,
+        56565,
+        676766,
+        78787,
+        dfgdf,
+        tgyhjtgh,
+        hjfgjfg,
+        sdfsdf,
+        gfhfgh,
+        sdfsdf,
+    ],
     ruleStores: [7, 8, 9, 18, 19],
     ruleDetail: masterRuleContent,
 };

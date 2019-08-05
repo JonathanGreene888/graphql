@@ -73,6 +73,7 @@ const typeDefs = `
    type Mutation {
     updateWeeksOfDemandRule(input: WeeksOfDemandInput!): String!
     updateWeeksOfDemandMasterRule(input: WeeksOfDemandMasterInput!): String!
+    aSDFAS
    }
 `;
 

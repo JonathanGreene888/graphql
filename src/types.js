@@ -1,5 +1,11 @@
 const typeDefs = `
 
+  input WeeksOfDemandMasterInput {
+    smooth: Int
+    weeklyDemandFactors: [Int!]
+    thresholds: [Int!]
+  }
+
   input WeeksOfDemandInput {
     ruleID: String
     ruleItems: [Int!]
@@ -66,7 +72,7 @@ const typeDefs = `
   # this schema allows the following mutation:
    type Mutation {
     updateWeeksOfDemandRule(input: WeeksOfDemandInput!): String!
-    updateWeeksOfDemandMasterRule(input: RuleDetail!): String!
+    updateWeeksOfDemandMasterRule(input: WeeksOfDemandMasterInput!): String!
    }
 `;
 

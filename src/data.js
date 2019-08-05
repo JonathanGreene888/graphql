@@ -27,7 +27,28 @@ export const ruleDetailContent = {
 };
 
 export const ruleContent = {
-    ruleItems: [1, 2, 3, 4, 5, 67, 78, 89, 23, 32, 56, 45454, 56565, 676766, 78787],
+    ruleItems: [
+        1,
+        2,
+        3,
+        4,
+        5,
+        67,
+        78,
+        89,
+        23,
+        32,
+        56,
+        45454,
+        56565,
+        676766,
+        78787,
+        234234,
+        23122312,
+        12312312312,
+        1234123312312,
+        234234234,
+    ],
     ruleStores: [7, 8, 9, 18, 19],
     ruleDetail: masterRuleContent,
 };

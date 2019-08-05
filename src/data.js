@@ -38,7 +38,7 @@ export const ruleContent = {
     1234,
     12356,
     124347657,
-    5656734523423456567567
+    5656734521231231
   ],
   ruleStores: [7, 8, 9, 18, 19],
   ruleDetail: masterRuleContent

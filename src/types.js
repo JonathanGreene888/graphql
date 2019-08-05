@@ -8,8 +8,8 @@ const typeDefs = `
 
   input WeeksOfDemandInput {
     ruleID: String
-    ruleItems: [Int!]
-    ruleStores: [Int!]
+    ruleItems: [ID!]
+    ruleStores: [ID!]
     smooth: Int
     thresholds: [Int]
     weeklyDemandFactors: [Int]
@@ -17,8 +17,8 @@ const typeDefs = `
 
   type WeeksOfDemandContent {
     ruleID: String
-    ruleItems: [Int!]
-    ruleStores: [Int!]
+    ruleItems: [ID!]
+    ruleStores: [ID!]
     smooth: Int
     thresholds: [Int]
     weeklyDemandFactors: [Int]
@@ -32,8 +32,8 @@ const typeDefs = `
 
   type RuleContent {
     ruleID: String
-    ruleItems: [Int!]
-    ruleStores: [Int!]
+    ruleItems: [ID!]
+    ruleStores: [ID!]
     ruleDetail: RuleDetail
   }
 
